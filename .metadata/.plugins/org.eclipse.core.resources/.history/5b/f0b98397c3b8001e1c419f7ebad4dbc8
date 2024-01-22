@@ -1,0 +1,30 @@
+package com.rol.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.rol.dao.services.IProductoService;
+import com.rol.entities.Producto;
+
+@RestController
+@RequestMapping("/api")
+public class ProductoController {
+	
+	@Autowired
+	IProductoService iProductoService;
+	
+	//Listar procutos:
+	@GetMapping("/productos")
+	public List<Producto> productos(){
+		return iProductoService.findAll();
+	}
+	
+
+}
+
+
+

@@ -1,0 +1,25 @@
+package com.rol.entities;
+
+public class Producto {
+	
+	private Long id;
+	
+	private String nombre;
+	
+	private String codigo;
+	
+	private double precio;
+	
+	private Integer cantidad;
+	
+	private String marca;
+	
+
+	
+	public Producto() {
+		
+	}
+	
+	
+
+}

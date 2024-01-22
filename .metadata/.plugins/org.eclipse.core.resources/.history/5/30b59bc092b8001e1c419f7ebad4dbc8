@@ -1,0 +1,19 @@
+package com.rol.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.rol.dao.services.IProductoService;
+
+@RestController
+@RequestMapping("/api")
+public class ProductoController {
+	
+	@Autowired
+	IProductoService iProductoService;
+	
+	//Listar empleados:
+	
+
+}

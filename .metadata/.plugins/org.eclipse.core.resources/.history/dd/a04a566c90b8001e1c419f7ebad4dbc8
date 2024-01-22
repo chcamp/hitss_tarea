@@ -1,0 +1,40 @@
+package com.rol.dao.services;
+
+import java.util.List;
+import java.util.Map;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.BeanPropertyRowMapper;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.simple.SimpleJdbcCall;
+
+import com.rol.entities.Producto;
+
+public class ProductoServiceImpl implements IProductoService{
+	
+	@Autowired
+	JdbcTemplate jdbcTemplate;
+	
+	public ProductoServiceImpl(JdbcTemplate jdbcTemplate) {
+		
+		this.jdbcTemplate = jdbcTemplate;
+		
+	}
+	
+
+	@Override
+	public List<Producto> findAll() {
+		
+		SimpleJdbcCall jdbcCall = new SimpleJdbcCall(jdbcTemplate)
+				.withProcedureName("SP_EJEMPLO_HITSS")
+				.withoutProcedureColumnMetaDataAccess()
+				.returningResultSet("RESULT", BeanPropertyRowMapper.newInstance(Producto.class));
+		
+		Map<String, Object> result = jdbcCall.execute();
+		
+		List<Producto> productos = (List<Producto>) result.get("RESULT");
+		
+		return null;
+	}
+
+}

@@ -1,0 +1,5 @@
+package com.rol.dao.services;
+
+public interface IProductoService {
+
+}

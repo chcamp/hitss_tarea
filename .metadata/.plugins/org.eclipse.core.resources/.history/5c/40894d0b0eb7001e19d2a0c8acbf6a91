@@ -1,0 +1,15 @@
+package com.rol.dao.services;
+
+import java.util.List;
+
+import com.rol.entities.Producto;
+
+public class ProductoServiceImpl implements IProductoService{
+
+	@Override
+	public List<Producto> findAll() {
+		
+		return null;
+	}
+
+}

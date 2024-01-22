@@ -1,0 +1,31 @@
+package com.rol.dao.services;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.simple.SimpleJdbcCall;
+
+import com.rol.entities.Producto;
+
+public class ProductoServiceImpl implements IProductoService{
+	
+	@Autowired
+	JdbcTemplate jdbcTemplate;
+	
+	public ProductoServiceImpl(JdbcTemplate jdbcTemplate) {
+		
+		this.jdbcTemplate = jdbcTemplate;
+		
+	}
+	
+
+	@Override
+	public List<Producto> findAll() {
+		
+		SimpleJdbcCall jdbcCall
+		
+		return null;
+	}
+
+}
