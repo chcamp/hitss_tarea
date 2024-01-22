@@ -1,4 +1,6 @@
-# hitss_tarea
+# hitss_tarea - 
+
+AUTOR: ROLANDO CHRISTIAN CAMPOS ANGULO - 21/01/2024
 Tarea de Global Hitss
 
 Mis SP y consultas en Oracle:
